@@ -4,12 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Project</title>
+    <title>Django Questions</title>
 </head>
 <body>
-    <center><h1>Home Page</h1></center>
-    <a href="{% url 'main:home' %}">Home</a>
-    <a href="{% url 'main:result' %}">Result</a>
-    <a href="{% url 'main:contact' %}">Contact</a>
+    <center><h1>Django Questions</h1></center>
+    <section>
+        <div class="container">
+        {% for question in questions %}
+            <form action="">
+                <h4>{{question.question}}</h4>
+                <p>
+                    <label for="answer_1">{{question.answer_1}}</label>
+                    <input type="radio" name="answer_1" id="answer_1" value="1">
+                </p>
+                <p>
+                    <label for="answer_2">{{question.answer_2}}</label>
+                    <input type="radio" name="answer_2" id="answer_2" value="2">
+                </p>
+                <p>
+                    <label for="answer_3">{{question.answer_3}}</label>
+                    <input type="radio" name="answer_3" id="answer_3" value="3">
+                </p>
+                <p>
+                    <label for="answer_4">{{question.answer_4}}</label>
+                    <input type="radio" name="answer_4" id="answer_4" value="4">
+                </p>
+                <button type="submit">Tekshirish</button>
+            </form>
+            {% endfor %}
+        </div>
+    </section>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+        .section {
+            
+        }
+    </style>
+    
+        
+    
+        
 </body>
 </html>

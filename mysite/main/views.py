@@ -1,9 +1,15 @@
 from django.shortcuts import render
 
+from main.models import Question
+
 # Create your views here.
 
 def home(request):
-    return render(request, 'index.html')
+    question = Question.objects.all()
+    context = {
+        'questions':question,
+    }
+    return render(request, 'index.html', context)
 
 def result(request):
     return render(request, 'result.html')
