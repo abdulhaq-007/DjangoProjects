@@ -5,7 +5,6 @@ from django.db import models
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(verbose_name="Kategoriya nomi", max_length=100)
-    slug = models.SlugField()
 
     def __str__(self):
         return str(self.name)
@@ -19,7 +18,7 @@ class Post(models.Model):
     published = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.name)
+        return str(self.title)
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
@@ -27,4 +26,4 @@ class Comment(models.Model):
     comment = models.TextField()
 
     def __str__(self):
-        return str(self.name)
+        return str(self.post.title)
