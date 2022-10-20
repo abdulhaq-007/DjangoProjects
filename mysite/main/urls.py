@@ -3,8 +3,9 @@ from . import views
 
 app_name = 'main'
 
+
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('result/', views.result, name='result'),
-    path('contact/', views.contact, name='contact'),
+    path("", views.home, name='home'),
+    path("results/<int:quest_id>", views.results, name='results'),
+    path("contact/", views.contact, name='contact'),
 ]

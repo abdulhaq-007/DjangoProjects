@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Questions</title>
+    <title>Document</title>
 </head>
+
 <body>
-    <center><h1>Django Questions</h1></center>
+    <section>
+        <center>
+            <h2>Django Questions</h2>
+        </center>
+    </section>
+
+    <br><br>
     <section>
         <div class="container">
-        {% for question in questions %}
-            <form action="">
-                <h4>{{question.question}}</h4>
-                <p>
-                    <label for="answer_1">{{question.answer_1}}</label>
-                    <input type="radio" name="answer_1" id="answer_1" value="1">
-                </p>
-                <p>
-                    <label for="answer_2">{{question.answer_2}}</label>
-                    <input type="radio" name="answer_2" id="answer_2" value="2">
-                </p>
-                <p>
-                    <label for="answer_3">{{question.answer_3}}</label>
-                    <input type="radio" name="answer_3" id="answer_3" value="3">
-                </p>
-                <p>
-                    <label for="answer_4">{{question.answer_4}}</label>
-                    <input type="radio" name="answer_4" id="answer_4" value="4">
-                </p>
-                <button type="submit">Tekshirish</button>
-            </form>
-            {% endfor %}
+            
         </div>
     </section>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-family: 'Poppins', sans-serif;
-        }
-        .section {
-            
-        }
-    </style>
-    
-        
-    
-        
 </body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        transition: all 0.3s;
+        font-family: "Poppins", sans-serif;
+    }
+
+    section {
+        margin: 30px 0px;
+    }
+
+    .container {
+        padding: 0px 5%;
+    }
+
+    form {
+        margin: 20px 10px;
+        border: solid 0.3px red;
+        padding: 10px 20px;
+
+    }
+
+    button {
+        max-width: 250px;
+        padding: 10px 20px;
+        border: none;
+        background-color: orange;
+        border-radius: 5px;
+    }
+
+</style>
+
 </html>
